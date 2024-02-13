@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil BMI</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="result-container">
+            <h1>Hasil BMI</h1>
+            <div class="result-details">
+                <p><strong>Tinggi:</strong> {{ tinggi }} cm</p>
+                <p><strong>Berat:</strong> {{ berat }} kg</p>
+                <p><strong>Body Mass Index:</strong> {{ bmi }}</p>
+                <p class="{{ category|lower }}"><strong>Kategori:</strong> {{ category }}</p>
+            </div>
+            <div class="result-actions">
+                <a href="/" class="btn btn-primary">Kembali ke BMI Kalkulator</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
